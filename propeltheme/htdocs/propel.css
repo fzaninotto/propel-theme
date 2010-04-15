@@ -1,0 +1,222 @@
+/******************
+  General layout
+*******************/
+body {
+	color: #444;
+	background: #fff;
+	font-family: "Trebuchet MS", Trebuchet, verdana, helvetica, sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+
+.noscreen {
+	display: none;
+}
+
+.clear {
+	clear: both;
+}
+
+#body-container {
+	overflow: auto;
+	margin: 0 auto;
+	width: 950px;
+	background: #fff;
+}
+
+#header {
+	overflow: auto;
+	border-bottom: 1px dashed #D0D0D0;
+}
+
+#header img {
+	margin: 0;
+}
+
+#main {
+	width: 100%;
+	padding-top: 8px;
+}
+
+#footer-container {
+	clear: both;
+	border-top: 1px dashed #ddd;
+}
+
+/* Trac Strip navigation */
+#strip {
+        font: 13px Verdana,Arial,'Bitstream Vera Sans',Helvetica,sans-serif;
+	margin: 1px 0 5px 0;
+	height: 16px;
+
+
+}
+
+#strip a {
+	font-size: 10px;
+	border: none;
+}
+
+#strip #metanav {
+	float: right;
+	width: 60%;
+}
+
+#strip #metanav li.first {
+	padding-left: 0;
+}
+
+#strip #metanav.nav ul {
+	padding-left: 0;
+	text-align: right;
+}
+
+#strip #ctxtnav {
+	float: left;
+	width: 40%;
+}
+
+#strip #ctxtnav ul {
+	padding-left: 0;
+	text-align: left;
+}
+
+#strip #ctxtnav li.last {
+	padding-right: 0;
+}
+
+/*
+ * Site nav
+ */
+#sitenav {
+	clear: both;
+	float: right;
+	margin: 0;
+	padding: 0px;
+}
+
+#sitenav ul {
+	background: #fff;
+	margin: 0;
+	padding: 0 1px 0 0; 
+	list-style : none;
+	overflow: auto;
+	list-style: none;
+}
+
+#sitenav li {
+	margin: 0;
+	padding: 0;
+	float: left;
+	line-height: 3em;
+}
+
+#sitenav li:hover {
+	background-color: #efefef;
+}
+
+#sitenav a {
+	color: #444;
+	margin: 0em;
+	padding: 0.3em 1.5em;
+	text-decoration: none;
+	letter-spacing: 0.1em;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+/* Search */
+#search {
+	float: right;
+	clear: right;
+	width: 230px;
+}
+
+#search fieldset {
+	border: none;
+	margin: 0;
+}
+
+#s {
+	width: 150px;
+	margin-right: 5px;
+	padding: 3px;
+	border: 1px solid #D0D0D0;
+}
+
+#x {
+	padding: 3px;
+	border: 1px solid #D0D0D0;
+	background-color: #FFF;
+	text-transform: lowercase;
+	font-size: 11px;
+	color: #444;
+}
+
+/************
+	traclinks
+**************/
+#traclinks {
+        font: 13px Verdana,Arial,'Bitstream Vera Sans',Helvetica,sans-serif;
+	width: 100%;
+	margin: 0;
+	border-bottom: 1px dashed #D0D0D0;
+}
+
+#traclinks h2 {
+}
+
+#traclinks ul {
+	background: #fff;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: auto;
+	text-align: right;
+}
+
+#traclinks li {
+	padding: 0 8px;
+	border-right: 1px solid #D7D7D7;
+	display: inline;
+	white-space: nowrap;
+}
+
+#traclinks li.first {
+	
+}
+
+#traclinks li.last {
+	padding-right: 0;
+	border-right:medium none;
+}
+
+#traclinks li.active {
+	color: #B00;
+}
+
+#traclinks a {
+	color : inherit;
+	text-decoration: none;
+	font-size: 12px;
+	border-bottom: none;
+}
+
+#traclinks a:hover {
+	color: #BB0000;
+	background-color: transparent;
+}
+
+/************
+	content
+**************/
+#content {
+	
+}
+
+#content.timeline {
+	font: 13px verdana,arial,'Bitstream Vera Sans',helvetica,sans-serif;
+}

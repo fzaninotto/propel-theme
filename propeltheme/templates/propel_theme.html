@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.1 Transitional//EN" "http://www.w3.org/TR/2000/REC-xhtml1-20000126/DTD/xhtml1-transitional.dtd">
+<html  xmlns:py="http://genshi.edgewall.org/"
+      py:strip="" 
+      xml:lang="en" 
+      xmlns="http://www.w3.org/1999/xhtml" 
+      lang="en">
+<?python from genshi.builder import tag ?>
+
+        <body py:match="body" py:attrs="select('@*')">
+                <div id="body-container">
+                        <div id="header-container">
+                                <div id="header">
+                                        <div id="sitenav">
+                                                <ul>
+                                                        <li><a href="${href.wiki('Download')}">Download</a></li>
+                                                        <li><a href="${href.wiki('Documentation')}">Docs</a></li>
+                                                        <li><a href="${href.wiki('Support')}">Support</a></li>
+                                                        <li><a href="http://propel.posterous.com/">Blog</a></li>
+                                                        <li><a href="${href.timeline()}">Dev</a></li>
+                                                </ul>
+                                        </div><!-- sitenav -->
+                                        <div id="search" py:if="'SEARCH_VIEW' in perm">
+                                                <form method="get" action="${href.search()}">
+                                                <fieldset>
+                                                        <label for="s"><span class="noscreen">Search</span></label>
+                                                        <input type="text" id="s" name="q" value="" />
+                                                        <input type="submit" id="x" value="Search" />
+                                                        <input type="hidden" name="wiki" value="on" />
+                                                        <input type="hidden" name="changeset" value="on" />
+                                                        <input type="hidden" name="ticket" value="on" />
+                                                </fieldset>
+                                                </form>
+                                        </div>
+                                        <!-- start propel logo -->
+                                        <py:choose>
+                                        <a py:when="chrome.logo.src" href="${chrome.logo.link}">
+                                                <img src="${chrome.logo.src}" alt="${chrome.logo.alt}" />
+                                        </a>
+                                        <h1 py:otherwise=""><a href="${chrome.logo.link}">${project.name}</a></h1>
+                                        </py:choose>
+                                        <!-- end propel logo -->
+                                </div><!-- header -->
+                                <!-- Trac Navgation -->
+                                <py:if test="context.resource.realm != 'wiki'">
+                                <div id="traclinks">
+                                        <py:with vars="category='mainnav'">
+                                        <ul py:if="chrome.nav[category]">
+                                                <li py:for="idx, item in  enumerate(chrome.nav[category])"
+                                                        class="${classes(first_last(idx, chrome.nav[category]), active=item.active)}">
+                                                ${item.label}
+                                                </li>
+                                        </ul>
+                                        </py:with>
+                                </div>
+                                <!-- End Trac Navigation -->
+                                <div id="strip">
+                                        <div id="metanav" class="nav" py:with="category='metanav'">
+                                                <py:with vars="category='metanav'">
+                                                <ul py:if="chrome.nav[category]">
+                                                        <li py:for="idx, item in  enumerate(chrome.nav[category])"
+                                                                class="${classes(first_last(idx, chrome.nav[category]), active=item.active)}">${item.label}</li>
+                                                </ul>
+                                                </py:with>
+                                        </div>
+                                        <div id="ctxtnav" class="nav">
+                                                <ul>
+                                                        <li py:for="i, elm in enumerate(chrome.ctxtnav)" class="${i == 0 and 'first ' or None}${i+1 == len(chrome.ctxtnav) and 'last' or None}">$elm</li>
+                                                </ul>
+                                        </div>
+                                        <br class="noscreen clear" />
+                                </div>
+                                </py:if>
+                        </div>
+                        <!-- end header-container -->
+
+                        <div id="content-container">
+                        <div id="main">
+                                <!-- trac warnings -->
+                                <div id="warning" py:if="req and req.warnings" class="system-message">
+                                        <py:choose test="len(req.warnings)">
+                                                <py:when test="1">
+                                                        <strong>Warning:</strong> ${req.warnings[0]}
+                                                </py:when>
+                                                <py:otherwise>
+                                                        <strong>Warnings:</strong>
+                                                        <ul><li py:for="w in req.warnings">$w</li></ul>
+                                                </py:otherwise>
+                                        </py:choose>
+                                </div>
+                                <!-- end trac warnings -->
+
+                                <!-- trac content -->
+                                ${select('*|text()')}
+                        </div>
+                        </div>
+                        <div id="footer-container">
+                        <p class="right">${chrome.footer}</p>
+                        </div>
+                </div>
+        </body></html>

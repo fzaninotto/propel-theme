@@ -1,0 +1,23 @@
+<!--!
+     Template for the RSS feed  
+-->
+<div xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:py="http://genshi.edgewall.org/"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      class="rssembed">
+      <div class="rssHeader">
+          <span style="float:right;">&nbsp;${feed.date}</span>
+          <a href="${feed.link}">${feed.title} Blog Entries</a>
+      </div>
+      <py:for each="entry in entries">
+        <div class="entry">
+            <span class="updated" style="float:right;">${entry.date}</span>
+            <a href="${entry.link}">${entry.title}</a>
+            <py:if test="showDetails">
+                <div class="rssDetail">
+                    ${entry.description}
+                </div>
+            </py:if>
+        </div>
+      </py:for>
+</div>
