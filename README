@@ -1,0 +1,15 @@
+Propel ORM website trac theme
+=============================
+
+This is the Trac theme of the www.propelorm.org.
+
+Installation
+----------------
+
+1. Build the egg
+
+    > python setup.py bdist_egg
+
+2. Move the egg to the Trac install, under trac/plugins
+
+3. Restart the web server
