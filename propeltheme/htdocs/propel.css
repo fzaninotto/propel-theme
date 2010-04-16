@@ -4,10 +4,6 @@
 body {
 	color: #444;
 	background: #fff;
-	font-family: "Trebuchet MS", Trebuchet, verdana, helvetica, sans-serif;
-	font-size: 13px;
-	font-style: normal;
-	font-weight: normal;
 	margin: 0;
 	padding: 0;
 }
@@ -91,6 +87,7 @@ body {
  * Site nav
  */
 #sitenav {
+	font-family: "Trebuchet MS", Trebuchet, verdana, helvetica, sans-serif;
 	clear: both;
 	float: right;
 	margin: 0;
@@ -214,6 +211,9 @@ body {
 	
 }
 
-#content.timeline {
-	font: 13px verdana,arial,'Bitstream Vera Sans',helvetica,sans-serif;
+#content.wiki {
+	font-family: "Trebuchet MS", Trebuchet, verdana, helvetica, sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: normal;
 }
