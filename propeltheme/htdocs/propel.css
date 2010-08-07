@@ -18,7 +18,7 @@ body {
 
 #body-container {
 	overflow: auto;
-	margin: 0 auto;
+	margin: 25px auto 0;
 	width: 950px;
 	background: #fff;
 }
@@ -43,11 +43,10 @@ body {
 
 /* Trac Strip navigation */
 #strip {
-        font: 13px Verdana,Arial,'Bitstream Vera Sans',Helvetica,sans-serif;
+	font: 13px Verdana,Arial,'Bitstream Vera Sans',Helvetica,sans-serif;
 	margin: 1px 0 5px 0;
 	height: 16px;
-
-
+	padding-top: 4px;
 }
 
 #strip a {
@@ -104,7 +103,7 @@ body {
 
 #sitenav li {
 	margin: 0;
-	padding: 0;
+	padding: 0 20px;
 	float: left;
 	line-height: 3em;
 }
@@ -167,7 +166,7 @@ body {
 #traclinks ul {
 	background: #fff;
 	margin: 0;
-	padding: 0;
+	padding: 4px 0;
 	list-style: none;
 	text-align: right;
 }
