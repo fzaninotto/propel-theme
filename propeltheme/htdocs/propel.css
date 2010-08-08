@@ -18,7 +18,7 @@ body {
 
 #body-container {
 	overflow: auto;
-	margin: 25px auto 0;
+	margin: 0 auto;
 	width: 950px;
 	background: #fff;
 }
@@ -166,7 +166,7 @@ body {
 #traclinks ul {
 	background: #fff;
 	margin: 0;
-	padding: 4px 0;
+	padding: 0;
 	list-style: none;
 	text-align: right;
 }
