@@ -20,16 +20,27 @@
                                                 </ul>
                                         </div><!-- sitenav -->
                                         <div id="search" py:if="'SEARCH_VIEW' in perm">
-                                                <form method="get" action="${href.search()}">
-                                                <fieldset>
-                                                        <label for="s"><span class="noscreen">Search</span></label>
-                                                        <input type="text" id="s" name="q" value="" />
-                                                        <input type="submit" id="x" value="Search" />
-                                                        <input type="hidden" name="wiki" value="on" />
-                                                        <input type="hidden" name="changeset" value="on" />
-                                                        <input type="hidden" name="ticket" value="on" />
-                                                </fieldset>
-                                                </form>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+<script type="text/javascript">
+  google.load('search', '1');
+  google.setOnLoadCallback(function() {
+    google.search.CustomSearchControl.attachAutoCompletion(
+      '005488519896607697481:handapwklem',
+      document.getElementById('q'),
+      'cse-search-box');
+  });
+</script>
+<form action="http://www.propelorm.org/docs/search.html" id="cse-search-box">
+  <div>
+    <input type="hidden" name="cx" value="005488519896607697481:handapwklem" />
+    <input type="hidden" name="cof" value="FORID:9" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="q" id="q" autocomplete="off" size="31" />
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+<script type="text/javascript" src="http://www.google.com/cse/brand?form=cse-search-box&amp;lang=en"></script>
+
                                         </div>
                                         <!-- start propel logo -->
                                         <py:choose>
