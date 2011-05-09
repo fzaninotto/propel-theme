@@ -13,7 +13,7 @@
                                         <div id="sitenav">
                                                 <ul>
                                                         <li><a href="${href.wiki('Download')}">Download</a></li>
-                                                        <li><a href="${href.wiki('Documentation/1.5')}">Docs</a></li>
+                                                        <li><a href="${href.wiki('Documentation/1.6')}">Docs</a></li>
                                                         <li><a href="${href.wiki('Support')}">Support</a></li>
                                                         <li><a href="http://propel.posterous.com/">Blog</a></li>
                                                         <li><a href="${href.timeline()}">Dev</a></li>
@@ -86,6 +86,7 @@
 
                         <div id="content-container">
                         <div id="main">
+ 
                                 <!-- trac warnings -->
                                 <div id="warning" py:if="req and req.warnings" class="system-message">
                                         <py:choose test="len(req.warnings)">
