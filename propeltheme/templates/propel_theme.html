@@ -86,9 +86,12 @@
 
                         <div id="content-container">
                         <div id="main">
-                                <div style="text-align: center; font-size: 1.2em;">
-                                      <p>Please, find the new <a href="https://github.com/propelorm">Propel organization on Github</a>.</p>
+                                <py:if test="context.resource.realm != 'wiki'">
+                                <div style="text-align: center; font-size: 1.2em;background-color:#F9F878;padding:5px;margin-bottom:10px">
+                                      <p>The Propel source and Ticketing system have been moved to <a href="https://github.com/propelorm">GitHub</a> on 08/2011.</p>
+                                      <p>This site does not accept new tickets, and shows an outdated timeline.</p>
                                 </div>
+                                </py:if>
                                 <!-- trac warnings -->
                                 <div id="warning" py:if="req and req.warnings" class="system-message">
                                         <py:choose test="len(req.warnings)">
